@@ -1,0 +1,18 @@
+<MyLayout>
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: 20
+        spacing: 20
+
+        MDLabel:
+            text: "Enter the span lengths"
+
+        MDTextField:
+            hint_text: "Span Lengths"
+
+        MDRaisedButton:
+            text: "Enter"
+            on_release: root.press()
+
+        Widget:
