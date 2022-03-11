@@ -1,0 +1,12 @@
+<MyLayout>
+    BoxLayout:
+        orientation: "vertical"
+        padding: 20
+        spacing: 20
+
+        MDLabel:
+            id: label
+            text: root.text
+        Button:
+            text: "Submit"
+            on_release: root.click()

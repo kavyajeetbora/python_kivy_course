@@ -1,0 +1,32 @@
+#:import Factory kivy.factory.Factory
+
+<MyPopup>
+    auto_dismiss: False
+    title: "Error Message"
+    size_hint: (0.6,0.3)
+    pos_hint: {"center_x": 0.5, "center_y":0.5}
+
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "Choose a file to upload"
+        Button:
+            text: "OK"
+            on_release: root.dismiss()
+
+        Widget:
+
+<MyLayout>
+    id: my_layout
+    BoxLayout:
+        orientation: "vertical"
+        # size: root.width, root.height
+        padding: 20
+        spacing: 20
+
+        Label:
+            text: "Pcross file:"
+        Button:
+            text: "Upload Pcross File"
+            font_size: 32
+            on_release: Factory.MyPopup().open()

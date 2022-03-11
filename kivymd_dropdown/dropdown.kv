@@ -1,0 +1,14 @@
+<AppLayout>
+    BoxLayout:
+        orientation: "horizontal"
+        size: root.width, root.height
+
+        MDLabel:
+            text: "Country:"
+            pos_hint: {"center_x":0.5,"center_y":0.5}
+
+        MDDropDownItem:
+            id: country
+            pos_hint: {"center_x":0.5,"center_y":0.5}
+            text: "Denmark"
+            on_release: root.country_menu.open()
