@@ -1,0 +1,27 @@
+#:import Factory kivy.factory.Factory
+
+<MyLayout>
+    id: my_layout
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 20
+        spacing: 20
+
+        MDLabel:
+            text: "Upload file"
+            font_size: 32
+            halign: "center"
+
+        MDLabel:
+            id: filename
+            text: ""
+            halign: "center"
+
+        MDRaisedButton:
+            text: "Upload"
+            pos_hint: {"center_x":0.5}
+            on_release: root.choose_file()
+
+        Widget:

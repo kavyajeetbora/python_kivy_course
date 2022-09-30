@@ -1,0 +1,24 @@
+<MyLayout>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 50
+        spacing: 20
+
+        Button:
+            text: "File"
+            size_hint: (0.5,0.5)
+
+        Button:
+            text: "View"
+            # hardcoding the size of the button
+            size_hint: (None,None)
+            width: 200
+            height: 50
+
+            ## positioning the Button
+            pos_hint : {"center_x":0.5}
+
+        Button:
+            text: "Exit"
+            size_hint: (0.5,0.5)

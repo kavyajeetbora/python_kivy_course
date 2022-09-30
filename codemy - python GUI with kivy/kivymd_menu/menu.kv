@@ -1,0 +1,11 @@
+<IconListItem>
+    IconLeftWidget:
+        icon: root.icon
+
+Screen:
+    MDDropDownItem:
+        id: drop_item
+        pos_hint: {"center_x":0.5, "center_y":0.5}
+        text: "India"
+        on_release: app.menu.open()
+        size : (10,10)

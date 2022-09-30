@@ -1,0 +1,14 @@
+<MyLayout>
+    id: my_layout
+    BoxLayout:
+        orientation: "vertical"
+        # size: root.width, root.height
+        padding: 20
+        spacing: 20
+        Image:
+            id: my_image
+            source: ""
+            
+        FileChooserIconView:
+            id: filechooser
+            on_selection: my_layout.selected(filechooser.selection)

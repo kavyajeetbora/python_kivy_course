@@ -1,0 +1,51 @@
+<MyWidget>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+
+
+        Label:
+            text: "Please select your favourite team"
+            font_size: 40
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Arsenal"
+                font_size: 32
+
+            CheckBox:
+                group: "football_teams"
+                on_active: root.radio_button(self, self.active, "Arsenal")
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Manchester City"
+                font_size: 32
+
+            CheckBox:
+                group: "football_teams"
+                on_active: root.radio_button(self, self.active, "Manchester City")
+
+        GridLayout:
+            cols: 2
+
+            Label:
+                text: "Liverpool"
+                font_size: 32
+
+            CheckBox:
+                group: "football_teams"
+                on_active: root.radio_button(self, self.active, "Liverpool")
+
+
+        Label:
+            text: "Your Favourite team is:"
+            font_size: 32
+        Label:
+            id: output_label
+            text: ""
+            font_size: 32

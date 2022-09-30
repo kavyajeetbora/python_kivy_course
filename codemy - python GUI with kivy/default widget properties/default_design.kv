@@ -1,0 +1,46 @@
+<Button>
+    font_size:32
+    background_color: (0,0,1,1)
+
+<MyLayout>
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 10
+        spacing: 10
+
+        Label:
+            text: "Name"
+            font_size: 45
+
+            ## setting the background color of a label
+            background_color: (50/255, 168/255, 82/255, 1)
+            canvas.before:
+                Color:
+                    rgba: self.background_color
+                Rectangle:
+                    size: self.size
+                    pos: self.pos
+
+            ## Text properties of label:
+            color: (0,1,1,1)
+            bold: True
+            italic: True
+            outline_color: (1,0,0,1)
+            outline_width: 2
+
+        TextInput:
+            multiline: False
+
+        Label:
+            text: "Email"
+
+        TextInput:
+            multiline: False
+
+
+        Button:
+            text: "Submit"
+
+        Button:
+            text: "Clear"

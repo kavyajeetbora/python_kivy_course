@@ -1,0 +1,46 @@
+<MyWidget>
+
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width, root.height
+        padding: 20
+        spacing: 20
+
+        RoundedLabel:
+            text: "Hello"
+
+        RoundedButton:
+            text: "Say Hello"
+            size_hint: (0.5,0.5)
+            pos_hint: {"x": 0.5, "y":0.5}
+            align:"center"
+
+<RoundedButton@Button>
+    background_color: (0,0,0,0)
+    canvas.before:
+        Color:
+            rgba: (0.3,0.5,0.2,1)
+
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [0, 100, 0, 100]
+
+    canvas.after:
+        Color:
+            rgba: (0.5,0.5,0.2,1)
+
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [58]
+
+<RoundedLabel@Label>
+    canvas.before:
+        Color:
+            rgba: (0.3,0.5,0.9,0.7)
+
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [58]
